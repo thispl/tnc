@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "creation": "2020-09-21 16:22:03.333928",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subcontractor_id",
+  "subcontractor_name",
+  "name1",
+  "number",
+  "customer_name",
+  "place",
+  "date",
+  "from_date",
+  "to_date",
+  "value",
+  "nature_of_work",
+  "max_no_of_employees_required"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "JobOrder Name"
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Data",
+   "label": "JobOrder Number"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Data",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "subcontractor_id",
+   "fieldtype": "Link",
+   "label": "SubContractor ID",
+   "options": "Subcontractor"
+  },
+  {
+   "fetch_from": "subcontractor_id.subcontractor_name",
+   "fieldname": "subcontractor_name",
+   "fieldtype": "Data",
+   "label": "SubContractor Name"
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Data",
+   "label": "Value"
+  },
+  {
+   "fieldname": "nature_of_work",
+   "fieldtype": "Data",
+   "label": "Nature of Work"
+  },
+  {
+   "fieldname": "max_no_of_employees_required",
+   "fieldtype": "Data",
+   "label": "Max No of Employees Required"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2020-09-21 17:05:18.951162",
+ "modified_by": "Administrator",
+ "module": "Tnc",
+ "name": "JobOrder",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

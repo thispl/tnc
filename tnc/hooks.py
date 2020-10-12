@@ -126,4 +126,4 @@ app_license = "MIT"
 # override_doctype_dashboards = {
 # 	"Task": "tnc.task.get_dashboard_data"
 # }
-
+fixtures = ["Custom Field","Desk Page","Custom Script"]

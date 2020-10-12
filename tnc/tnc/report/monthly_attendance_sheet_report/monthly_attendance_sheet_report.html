@@ -1,0 +1,38 @@
+<h2 class="text-center">{%= __("FORM B") %}</h2>
+<h2 class="text-center">{%= __("WAGE REGISTER") %}</h2>
+{%
+	var report_columns = report.get_columns_for_print();
+%}
+<style>
+	td{
+		font-size: 11px;
+	}
+	th{
+		font-size: 9px;
+	}
+	.center {
+		margin-left: auto;
+		margin-right: auto;
+	  }
+</style>
+<meta name="pdfkit-orientation" content="landscape">
+				<table border="1">
+					<tr>
+						<td colspan="2">Name and Address of Contractor:</td>
+						<td colspan="2">TeamPRO HR & IT SERVICES<br> 1/81, Samayapuram 2nd St, Karambakkam, Samayapuram
+							Nagar, Porur, Chennai, Tamil Nadu 600116 </td>
+						<td colspan="2">Name and Address of Principal employer </td>
+						<td colspan="2">Neyveli Lignite Corporation </td>
+						<td colspan="2">Name of the Owner </td>
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<td colspan="2">Wage Period</td>
+						<td colspan="2">From: {%= filters.from_date %} <br>To: {%= filters.to_date %} </td>
+						<td colspan="4">(Monthly/Fortnight/Weekly/Daily/Piece Rated </td>
+						<td colspan="2">Work order</td>
+						<td colspan="2">25869172 </td>
+
+					</tr>
+
+				</table>

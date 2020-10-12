@@ -1,17 +1,22 @@
 {
  "actions": [],
+ "autoname": "field:name1",
  "creation": "2020-09-21 16:22:03.333928",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "subcontractor_id",
+  "column_break_2",
   "subcontractor_name",
+  "section_break_3",
   "name1",
   "number",
-  "customer_name",
+  "plant",
+  "plant_name",
   "place",
   "date",
+  "column_break_7",
   "from_date",
   "to_date",
   "value",
@@ -22,18 +27,15 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "label": "JobOrder Name"
+   "in_list_view": 1,
+   "label": "Job Order Name",
+   "unique": 1
   },
   {
    "fieldname": "number",
    "fieldtype": "Data",
-   "label": "JobOrder Number"
-  },
-  {
-   "fieldname": "customer_name",
-   "fieldtype": "Link",
-   "label": "Customer Name",
-   "options": "Customer"
+   "label": "Job Order Number",
+   "unique": 1
   },
   {
    "fieldname": "place",
@@ -48,11 +50,13 @@
   {
    "fieldname": "from_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "From Date"
   },
   {
    "fieldname": "to_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "To Date"
   },
   {
@@ -65,7 +69,9 @@
    "fetch_from": "subcontractor_id.subcontractor_name",
    "fieldname": "subcontractor_name",
    "fieldtype": "Data",
-   "label": "SubContractor Name"
+   "in_list_view": 1,
+   "label": "SubContractor Name",
+   "read_only": 1
   },
   {
    "fieldname": "value",
@@ -81,14 +87,40 @@
    "fieldname": "max_no_of_employees_required",
    "fieldtype": "Data",
    "label": "Max No of Employees Required"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Plant",
+   "options": "Plant"
+  },
+  {
+   "fetch_from": "plant.customer_code",
+   "fieldname": "plant_name",
+   "fieldtype": "Data",
+   "label": "Plant Name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2020-09-21 17:05:18.951162",
+ "modified": "2020-10-09 11:58:54.692360",
  "modified_by": "Administrator",
  "module": "Tnc",
- "name": "JobOrder",
+ "name": "Job Order",
  "owner": "Administrator",
  "permissions": [
   {
@@ -107,5 +139,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "number",
  "track_changes": 1
 }

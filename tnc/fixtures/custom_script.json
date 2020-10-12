@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Custom Script",
+  "dt": "Employee",
+  "modified": "2020-09-30 16:36:32.173964",
+  "name": "Employee-Client",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on('Employee', {\n\trefresh(frm) {\n\tfrm.add_custom_button('Gate Pass', () => {\n\t    console.log('hi')\n        frappe.call({\n            method: 'tnc.custom.generate_qr',\n\t\t\targs: {\n\t\t\t\t\t\"employee\": frm.doc.employee\n\t\t\t},\n\t\t\tcallback: function(r) {\n\t\t\t\tfrappe.msgprint(\"Downloaded Succesfully\");\n\t\t\t}\n        })\n\t})\n\t}\n\t\n})"
+ }
+]

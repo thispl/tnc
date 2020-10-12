@@ -7,14 +7,14 @@ frappe.query_reports["Salary Register Report"] = {
 			"fieldname": "from_date",
 			"label": __("From"),
 			"fieldtype": "Date",
-			"default": frappe.datetime.add_months(frappe.datetime.get_today(), -1),
+			"default": frappe.datetime.add_days(frappe.datetime.get_today(), -9),
 			"reqd": 1
 		},
 		{
 			"fieldname": "to_date",
 			"label": __("To"),
 			"fieldtype": "Date",
-			"default": frappe.datetime.get_today(),
+			"default": frappe.datetime.add_days(frappe.datetime.get_today(), 21),
 			"reqd": 1
 		},
 		{
@@ -35,7 +35,20 @@ frappe.query_reports["Salary Register Report"] = {
 			"label": __("Document Status"),
 			"fieldtype": "Select",
 			"options": ["Draft", "Submitted", "Cancelled"],
-			"default": "Submitted"
+			"default": "Draft"
+		},
+		{
+			"fieldname": "subcontractor_id",
+			"label": __("SubContractor ID"),
+			"fieldtype": "Link",
+			"options": "Subcontractor"
+
+		},
+		{
+			"fieldname": "job_order_name",
+			"label": __("Job Order Name"),
+			"fieldtype": "Link",
+			"options": "Job Order",
 		}
 	]
 }

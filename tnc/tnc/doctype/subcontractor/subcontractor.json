@@ -11,9 +11,18 @@
   "subcontractor_id",
   "contact_person",
   "contact_no",
+  "column_break_8",
+  "landline_no",
   "mail_id",
+  "gst_no",
   "address",
-  "gst_no"
+  "address_line_1",
+  "address_line_2",
+  "citytown",
+  "column_break_13",
+  "state",
+  "country",
+  "postal_code"
  ],
  "fields": [
   {
@@ -46,7 +55,7 @@
   },
   {
    "fieldname": "address",
-   "fieldtype": "Data",
+   "fieldtype": "Section Break",
    "label": "Address"
   },
   {
@@ -54,11 +63,54 @@
    "fieldtype": "Data",
    "label": "GST No",
    "length": 15
+  },
+  {
+   "fieldname": "landline_no",
+   "fieldtype": "Data",
+   "label": "Landline No"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "citytown",
+   "fieldtype": "Data",
+   "label": "City/Town"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2020-09-25 11:13:40.110724",
+ "modified": "2020-09-29 10:14:37.640983",
  "modified_by": "Administrator",
  "module": "Tnc",
  "name": "Subcontractor",

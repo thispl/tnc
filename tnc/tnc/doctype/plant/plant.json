@@ -8,15 +8,18 @@
  "field_order": [
   "customer_name",
   "customer_code",
-  "location",
+  "column_break_4",
   "phone_no",
   "mail_id",
   "address",
+  "location",
   "address_line_1",
   "address_line_2",
+  "column_break_13",
+  "pin_code",
   "towncity",
   "state",
-  "pin_code"
+  "country"
  ],
  "fields": [
   {
@@ -28,7 +31,7 @@
   {
    "fieldname": "customer_code",
    "fieldtype": "Data",
-   "label": "Customer Code"
+   "label": "Plant Code"
   },
   {
    "fieldname": "location",
@@ -74,11 +77,24 @@
    "fieldname": "pin_code",
    "fieldtype": "Data",
    "label": "Pin Code"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2020-10-09 11:55:58.180374",
+ "modified": "2020-10-31 19:29:59.286565",
  "modified_by": "Administrator",
  "module": "Tnc",
  "name": "Plant",

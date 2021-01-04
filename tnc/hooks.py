@@ -10,6 +10,7 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "sarumathy.d@groupteampro.com"
 app_license = "MIT"
+app_logo_url = '/files/t&c.jpg'
 
 # Includes in <head>
 # ------------------
@@ -79,13 +80,16 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+doc_events = {
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 #	}
-# }
+    "Salary Structure Assignment":{
+        "on_submit": "tnc.custom.check_gross_against_ss"
+    }
+}
 
 # Scheduled Tasks
 # ---------------
@@ -126,4 +130,3 @@ app_license = "MIT"
 # override_doctype_dashboards = {
 # 	"Task": "tnc.task.get_dashboard_data"
 # }
-fixtures = ["Custom Field","Desk Page","Custom Script"]
